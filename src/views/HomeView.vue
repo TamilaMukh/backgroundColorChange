@@ -1,5 +1,5 @@
 <template>
-  <div class="home" > 
+  <div class="home"> 
     <div class="container mx-auto">
       <carousel />
       <products />

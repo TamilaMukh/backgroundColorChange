@@ -39,7 +39,7 @@
           "
         >
           <i class="fa-solid fa-list mr-3"></i>
-          <p class="font-semibold">Каталог</p>
+          <p @click="changeKatalog()" class="font-semibold">Каталог</p>
         </div>
         <div class="w-1/3 relative">
           <input
@@ -132,6 +132,141 @@
         </div>
       </div>
     </div>
+    <div v-if="showKatalog === 1" class="w-full bg-white absolute z-50">
+      <div class="container mx-auto py-6">
+        <div class="flex items-center">
+          <div class="block w-1/5 mr-6 border-r">
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-bars mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Все категории</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-mobile-alt mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Смартфоны и гаджеты</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-desktop mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Ноутбуки и компьютеры</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-desktop mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Всё для геймеров</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-desktop mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">ТВ, аудио и музыкальные инструменты</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-camera mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Фототехника и квадракоптеры</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-blender mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Бытовая техника</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-blender mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Техника для кухни</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-palette mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Красота и здоровье</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-car mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Спорт, туризм, багаж</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-car mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Автотовары и транспорт</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-child mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Детские товары</p>
+            </div>
+            <div class="flex items-center text-xl my-2">
+              <i class="fas fa-home mr-4 text-gray-400"></i>
+                <p class="hover:text-oran">Товары для дома и сада</p>
+            </div>
+          </div>
+          <div class="aoao overflow-y-scroll flex">
+            <div class="flex mr-6">
+              <div class="text-lg w-2/5">
+              <h1 class="text-xl font-semibold my-2">Смартфоны и телефоны</h1>
+              <p>Смартфоны</p>
+              <p>Смартфоны Apple</p>
+              <p>Смартфоны Samsung</p>
+              <p>Смартфоны Huawei</p>
+              <p>Смартфоны Xiaomi</p>
+              <p>Смартфоны Oppo</p>
+              <p>Смартфоны Vivo</p>
+              <p>Смартфоны Poco</p>
+              <p>Мобильные телефоны</p>
+              <p>Радиотелефоны DECT</p>
+              <h1 class="text-xl font-semibold mt-4 mb-2">Планшеты и электронные книги</h1>
+              <p>Планшеты</p>
+              <p>Планшеты Samsung</p>
+              <p>Планшеты Apple iPad</p>
+              <p>Аксессуары для iPad</p>
+              <p>Чехлы для планшетов</p>
+              <p>Аксессуары для планшетов</p>
+              <p>Электронные книги</p>
+              <h1 class="text-xl font-semibold mt-4 mb-2">Программное обеспечение</h1>
+              <p>Антивирусы и безопасность для смартфонов</p>
+              <p>Офисные программы для смартфонов</p>
+              <p>Учеба и развитие для смартфонов</p>
+              <p>Цифровой контент для смартфонов</p>
+              <p>Удаленный сервис для смартфонов</p>
+            </div>
+            <div class="text-lg w-2/5">
+              <h1 class="text-xl font-semibold mt-4 mb-2">Гаджеты</h1>
+              <p>Смарт часы</p>
+              <p>Apple Watch</p>
+              <p>Смарт часы Huawei</p>
+              <p>Смарт часы Xiaomi</p>
+              <p>Аксессуары для смарт часов</p>
+              <p>Фитнес браслеты</p>
+              <p>Детские часы с GPS</p>
+              <p>Экшн-камеры</p>
+              <p>Аксессуары для экшн камер</p>
+              <p>Bluetooth-трекер</p>
+              <h1 class="text-xl font-semibold mt-4 mb-2">Аксессуары для телефонов</h1>
+              <p>Портативное аудио</p>
+              <p>Внешние аккумуляторы</p>
+              <p>Чехлы</p>
+              <p>Защита экрана</p>
+              <p>Карты памяти</p>
+              <p>Зарядные устройства</p>
+              <p>Кабели и адаптеры для смартфонов</p>
+              <p>Мобильная оптика</p>
+              <p>Аксессуары для экшн камер</p>
+              <p>Подставки</p>
+              <p>Селфи моноподы</p>
+              <p>Стабилизаторы (Стедикамы)</p>
+              <p>Стилусы</p>
+            </div>
+            <div class="text-lg w-2/5">
+              <h1 class="text-xl font-semibold mt-4 mb-2">Наушники</h1>
+              <p>AirPods</p>
+              <p>Наушники Xiaomi</p>
+              <p>Беспроводные</p>
+              <p>Проводные</p>
+              <p>Все наушники</p>
+              <h1 class="text-xl font-semibold mt-4 mb-2">Умный дом</h1>
+              <p>Умный дом Xiaomi</p>
+              <p>Управление для умного дома</p>
+              <p>Пульты управления для умного дома</p>
+              <p>Умные лампы</p>
+              <p>Умные розетки</p>
+              <p>Датчикиы</p>
+              <p>Яндекс (Алиса)</p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="w-full h-screen" :class="{ 'bg-opa': showKatalog == 1 }"></div> -->
   </div>
 </template>
 
@@ -141,6 +276,7 @@ export default {
   name: "NavbarComp",
   data() {
     return {
+      showKatalog: 0,
       showCart: 0,
       changeButton: 1,  
       currentUser: null,
@@ -159,6 +295,13 @@ export default {
         this.showCart = 1
       } else {
         this.showCart = 0
+      }
+    },
+    changeKatalog() {
+      if(this.showKatalog === 0) {
+        this.showKatalog = 1
+      } else {
+        this.showKatalog = 0
       }
     },
     sendRequest() {
